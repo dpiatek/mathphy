@@ -13,5 +13,18 @@ module.exports = {
     }
 
     return output;
+  },
+  stringToValue: function stringToValue (string, base) {
+    var output, remainingString, remainingStringValue;
+
+    if (!string) {
+      output = 0;
+    } else {
+      output = Number(string.slice(-1));
+      remainingString = string.slice(0, -1);
+      remainingStringValue = stringToValue(remainingString, base);
+      output = (base * remainingStringValue) + output;
+    }
+    return output;
   }
 };
