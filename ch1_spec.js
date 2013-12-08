@@ -26,5 +26,17 @@ describe('Numbers:', function () {
       expect(number.stringToValue('1100', 8)).to.equal(parseInt('1100', 8));
     });
   });
+
+  describe('adding binary', function () {
+    it('should return 1101 for 1100 + 0001', function () {
+      expect(number.addBinary('1100', '0001')).to.equal('1101');
+    });
+    it('should return 111 for 110 + 001', function () {
+      expect(number.addBinary('110', '001')).to.equal('111');
+    });
+    it('should return 110100011 for 10101111 + 11110100', function () {
+      expect(number.addBinary('10101111', '11110100')).to.equal('110100011');
+    });
+  });
 });
 
