@@ -1,0 +1,10 @@
+{
+  "name": "mathphy",
+  "version": "0.0.0",
+  "devDependencies": {
+    "mocha": "~1.15.1",
+    "chai": "~1.8.1"
+  },
+  "author": "Dominik Piatek",
+  "license": "BSD-2-Clause"
+}
