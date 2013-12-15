@@ -38,5 +38,17 @@ describe('Numbers:', function () {
       expect(number.addBinary('10101111', '11110100')).to.equal('110100011');
     });
   });
+
+  describe('convert base (exercise 1.2)', function () {
+    it('from decimal to binary', function () {
+      expect(number.convertBase('100', 10, 2)).to.equal('1100100');
+    });
+    it('from binary to octal', function () {
+      expect(number.convertBase('1100100', 2, 8)).to.equal('144');
+    });
+    it('from decimal to hex', function () {
+      expect(number.convertBase('144', 10, 16)).to.equal('90');
+    });
+  });
 });
 
